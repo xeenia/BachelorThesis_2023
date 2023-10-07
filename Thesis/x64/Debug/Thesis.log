@@ -1,0 +1,5 @@
+﻿  Interpreter.cpp
+C:\Users\polyx\source\Thesis_Motsi_Polyxeni\Thesis\Interpreter.cpp(638,12): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\polyx\source\Thesis_Motsi_Polyxeni\Thesis\Interpreter.cpp(641,31): warning C4101: 'e': unreferenced local variable
+C:\Users\polyx\source\Thesis_Motsi_Polyxeni\Thesis\Interpreter.cpp(692,33): warning C4101: 'e': unreferenced local variable
+  Thesis.vcxproj -> C:\Users\polyx\source\Thesis_Motsi_Polyxeni\x64\Debug\Thesis.exe

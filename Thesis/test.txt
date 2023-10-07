@@ -1,0 +1,181 @@
+class class_A{
+	init(a){
+		this.a = a;
+	}
+
+	introduceClass_A(){
+		printnl: "Hello! I'm in class_A, my field is: " + this.a;
+	}
+	getName_A(){
+		return "Class A";
+	}
+}
+
+class class_B < class_A{
+	init(b, a){
+		this.b = b;
+		super.init(a);
+	}
+
+	introduceClass_B(){
+		printnl: "Hello! I'm in class_B, my field is: " + this.b;
+	}
+
+	getName_B(){
+		return "Class B";
+	}
+}
+
+class class_C < class_B{
+	init(c, b, a){
+		this.c = c;
+		super.init(b, c);
+	}
+	
+	introduceClass_C(){
+		printnl: "Hello! I'm in class_C, my field is: " + this.c;
+	}
+
+	getName_C(){
+		return "Class C";
+	}
+
+	callClass_B(){
+		printnl: "Hey " + super.getName_B() + "!";
+	}
+
+	callClass_A(){
+		printnl: "Hey " + super.getName_A() + "!";
+	}
+}
+
+fun sum(num_1, num_2){
+	return num_1 + num_2;
+}
+
+fun checkOddEven(num_1){
+	if(num_1 % 2 == 0){
+		printnl: num_1 + " is even.";
+	}else{
+		printnl: num_1 + " is odd.";
+	}
+}
+
+var class_object = class_C("1", "2" , "3");
+class_object.introduceClass_B();
+class_object.callClass_A();
+
+var sum_number = sum(10,15);
+
+printnl: "The result of sum(10,15) is: " +sum_number;
+checkOddEven(10);
+checkOddEven(7);
+printnl: "For statement:";
+for(var i=0; i<5; i++)
+	printnl: "Number: " + i;
+
+print: "While statement: ";
+var while_test = 0;
+while(true){
+	if(while_test == 5)
+		break;
+	print: while_test++;
+}
+
+// print: "This is a comment.";
+
+printnl: "";
+printnl: "DoWhile statement:";
+do{
+	if((while_test--) > 0)
+		continue;
+	printnl: while_test;
+}while(while_test > -5);
+
+printnl: "Conditional operator: " + ((false)? "true" : "false");
+
+/*
+
+This is a comment.
+print: "A comment.";
+
+*/
+
+var test = 10;
+printnl: "var test is int -> " + test;
+test = 10.5;
+printnl: "var test is double -> " + test;
+test = "Apple";
+printnl: "var test is string -> " + test;
+test = sum;
+printnl: "var test is function -> " + test(4,8);
+test = class_B(1,2);
+printnl: "var test is an object for -> " + test.getName_B();
+
+var a = 10;
+var b = 20;
+
+printnl: "Var a = " + a;
+printnl: "Var b = " + b;
+
+printnl: "Result of a + b = " + (a + b);
+printnl: "Result of a - b = " + (a - b);
+printnl: "Result of a * b = " + (a * b);
+printnl: "Result of a / b = " + (a / b);
+printnl: "Result of a % b = " + (a % b);
+
+printnl: "Result of a < b = " + (a < b);
+printnl: "Result of a <= b = " + (a <= b);
+printnl: "Result of a > b = " + (a > b);
+printnl: "Result of a >= b = " + (a >= b);
+
+printnl: "Result of a == b = " + (a == b);
+printnl: "Result of a != b = " + (a != b);
+
+printnl: "Result of a && b = " + (a && b);
+printnl: "Result of a || b = " + (a || b);
+
+printnl: "Result of a + b -  ( 10 < a) * a * b = " + (a + b -  ( 10 < a) * a * b);
+
+printnl: "Var a is " + a + " but after a+=10 it became " + (a += 10);
+printnl: "So, a is " + a;
+
+printnl: "Var a is " + a + " but after a-=5 it became " + (a -= 5);
+printnl: "So, a is " + a;
+
+printnl: "Var a is " + a + " but after a*=2 it became " + (a *= 2);
+printnl: "So, a is " + a;
+
+printnl: "Var a is " + a + " but after a/=2 it became " + (a /= 2);
+printnl: "So, a is " + a;
+
+printnl: "Var a is " + a + " but after a%=2 it became " + (a %= 2);
+printnl: "So, a is " + a;
+
+printnl: "Var a is " + a + " but after a=100 it became " + (a = 100);
+printnl: "So, a is " + a;
+
+printnl: "If I do !a then I will have " + !a;
+printnl: "If I do -a then I will have " + -a;
+printnl: "If I do ++a then I will have " + (++a) + " and a is " + a;
+printnl: "If I do a++ then I will have " + (a++) + " and now a is " + a;
+printnl: "If I do --a then I will have " + (--a) + " and a is " + a;
+printnl: "If I do a-- then I will have " + (a--) + " and now a is " + a;
+
+printnl: "The var a is global with value: " + a ;
+{
+	var a = 200;
+	printnl: "Local a: " + a;
+
+}
+
+printnl: "Global a: " + a;
+
+print: "Add a value for the var test: ";
+read: test;
+printnl: "You added: " + test;
+var test2;
+print: "Add 2 values for seperated by ',' (comma): ";
+
+read: a, b;
+printnl: "You added: " + a + " and " + b;

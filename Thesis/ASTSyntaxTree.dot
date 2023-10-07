@@ -1,0 +1,22 @@
+digraph G{
+ node [shape=box, style=filled, fontname="Helvetica", fontsize=10];
+0 [label="Start ", fillcolor = "#997b66"];
+1 [label="Superclass: Base", fillcolor = "#fff1e6"];
+2 [label="Identifier (Base)", fillcolor = "#797d62"];
+3 [label="Expression Stmt ", fillcolor = "#d08c60"];
+4 [label="Call Expr ", fillcolor = "#f1dca7"];
+5 [label="Get: bar", fillcolor = "#f1dca7"];
+6 [label="Call Expr ", fillcolor = "#f1dca7"];
+7 [label="Identifier (Derived)", fillcolor = "#797d62"];
+8 [label="Arguments ", fillcolor = "#f1dca7"];
+9 [label="Arguments ", fillcolor = "#f1dca7"];
+0 -> 1; 
+1 -> 2; 
+0 -> 3; 
+3 -> 4; 
+4 -> 5; 
+4 -> 6; 
+6 -> 7; 
+6 -> 8; 
+6 -> 9; 
+ }
