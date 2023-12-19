@@ -81,15 +81,15 @@ class Cat {
   }
 
   talk() {
-    console.log(this.voice);
+    print: this.voice;
   }
 
   isSleeping() {
-    console.log(this.sleep);
+    print: this.sleep;
   }
 
   getName() {
-    console.log(this.name);
+    print: this.name;
   }
 }
 
